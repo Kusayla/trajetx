@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0c0c0e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>TrajetX - Devis Depannage</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>Trajet<span>X</span></h1>
+            <p>Estimation de devis depannage</p>
+        </header>
+
+        <main class="main-content">
+            <div class="card">
+                <h2>Votre trajet</h2>
+
+                <div class="form-group">
+                    <label for="adresseA">Adresse de depart</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" id="adresseA" placeholder="Tapez une adresse..." autocomplete="off">
+                        <div class="autocomplete-results" id="resultsA"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresseB">Adresse d'arrivee</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" id="adresseB" placeholder="Tapez une adresse..." autocomplete="off">
+                        <div class="autocomplete-results" id="resultsB"></div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="btnCalculer">
+                    Calculer la distance
+                </button>
+            </div>
+
+            <div class="card result-card" id="distanceCard" style="display: none;">
+                <h2>Distance</h2>
+                <div class="distance-result">
+                    <span id="distanceKm">0</span> km
+                </div>
+                <p class="duration" id="duration"></p>
+            </div>
+
+            <div class="card" id="prestationsCard" style="display: none;">
+                <h2>Prestations</h2>
+                <div class="prestations-list" id="prestationsList"></div>
+            </div>
+
+            <div class="card" id="optionsCard" style="display: none;">
+                <h2>Options</h2>
+                <div class="options-list">
+                    <label class="option-item">
+                        <input type="checkbox" id="optionNuit">
+                        <span>Intervention de nuit (22h-6h)</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" id="optionWeekend">
+                        <span>Week-end / Jour ferie</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="card devis-card" id="devisCard" style="display: none;">
+                <h2>Votre Devis</h2>
+                <div class="devis-details" id="devisDetails"></div>
+                <div class="devis-total">
+                    <span>TOTAL TTC</span>
+                    <span id="totalTTC">0 EUR</span>
+                </div>
+                <a href="#" id="btnAppeler" class="btn btn-call">
+                    Appeler le depanneur
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>TrajetX - <a href="admin/">Espace Admin</a></p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "admin": {
+    "username": "AdminYac",
+    "password": "$2a$10$2e2gEXmItPFaMH2ctD3JgOv5cP0JhqIgOMdkjngHXsjw54P3ZhANq",
+    "phone": "0777851780"
+  },
+  "tarifs": {
+    "priseEnCharge": 50,
+    "prixKm": 2.5,
+    "tarifNuit": 1.5,
+    "tarifWeekend": 1.3
+  },
+  "prestations": [
+    {
+      "id": 1,
+      "nom": "Remorquage",
+      "prix": 80,
+      "actif": false
+    },
+    {
+      "id": 2,
+      "nom": "Depannage sur place",
+      "prix": 60,
+      "actif": false
+    },
+    {
+      "id": 3,
+      "nom": "Ouverture de porte",
+      "prix": 70,
+      "actif": false
+    },
+    {
+      "id": 4,
+      "nom": "Batterie - Demarrage",
+      "prix": 45,
+      "actif": true
+    },
+    {
+      "id": 5,
+      "nom": "Crevaison",
+      "prix": 40,
+      "actif": true
+    }
+  ]
+}
